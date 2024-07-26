@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
+    <script src='/javascript/app.js' defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="dark-theme" id="body">
@@ -12,12 +13,21 @@
             <div class="calc">
               <div class="calc__header">
                 <h1 class="calc__heading">calculator</h1>
-              <fieldset>
-                <legend>Theme</legend>
-                <input type="radio" name="dark" id="dark" aria-label='Dark color theme'>
-                <input type="radio" name="light" id="light" aria-label="Light color theme">
-                <input type="radio" name="neon" id="neon" aria-label="Neon color theme">
-              </fieldset>
+                <div>
+                    <fieldset class="theme__switcher">
+                      <legend>Theme</legend>
+                      <input type="radio" name="dark" id="dark" aria-label='Dark color theme'>
+                      <input type="radio" name="light" id="light" aria-label="Light color theme">
+                      <input type="radio" name="neon" id="neon" aria-label="Neon color theme">
+                      <input type="radio" name="theme" id="dark" value="dark-theme" aria-label='Dark color theme' checked>
+                      <label for="dark">1</label>
+                      <input type="radio" name="theme" id="light" value="light-theme" aria-label="Light color theme">
+                      <label for="light">2</label>
+                      <input type="radio" name="theme" id="neon" value="neon-theme" aria-label="Neon color theme">
+                      <label for="neon">3</label>
+                    </fieldset>
+                  </div>
+                </div>
             </div>
           </div>
           <div class="calc__display">000</div>
@@ -36,7 +46,7 @@
             <button class="calc__btn btn-num">&minus;</button>
             <button class="calc__btn btn-num">&#46;</button>
             <button class="calc__btn btn-num">0</button>
-            <button class="calc__btn btn-num">&#47;</button>
+            <button class="calc__btn btn-num">&     #47;</button>
             <button class="calc__btn btn-num">&times;</button>
             <button class="calc__btn btn-func btn-reset">reset</button>
             <button class="calc__btn btn-equals">&#61;</button>
