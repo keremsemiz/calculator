@@ -6,13 +6,16 @@ function formatResult(result, maxLength) {
 
     if( getDigitCount(result) > maxLength) {
 
+
         if (isFloat(result)) {
             const resultInt = parseInt(result);
             const resultIntLength = getDigitCount(resultInt);
 
+
             if (resultIntLength > maxLength) {
                 return result.toPrecision(precision);
             }
+
             else {
                 const digitsAfterDecimal = maxLength - resultIntLength;
 
@@ -26,6 +29,7 @@ function formatResult(result, maxLength) {
     }
     
     return result.toLocaleString('en-UK')
+
 }
 
 export default formatResult;
