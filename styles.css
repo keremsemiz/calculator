@@ -115,7 +115,7 @@ main {
     color: var(--display-text);
 }
 
-/* Accessible toggle =====================================================*/
+
 .theme__switcher {
     --thumb-padding: 0.3125rem;
 
@@ -165,7 +165,7 @@ main {
     text-decoration: underline;
 }
 
-/* toggle background */
+
 .theme__switcher label:first-of-type::after {
     content: '';
     position: absolute;
@@ -178,12 +178,11 @@ main {
     border-radius: 0.875rem;
 }
 
-/* toggle background focus state */
+
 .theme__switcher:focus-within label:first-of-type::after {
     box-shadow: 0 0 0 2px var(--bg-color), 0 0 0 4px var(--focus-color);
 }
 
-/* toggle thumb */
 
 .theme__switcher label:last-of-type:before {
     content: '';
@@ -198,7 +197,6 @@ main {
     z-index: 3;
 }
 
-/* move it when other inputs are selected */
 .theme__switcher input:first-of-type:checked ~ label:last-of-type::before {
     transform: translateX(-3.375rem);
 }
@@ -210,8 +208,6 @@ main {
 .theme__switcher input:last-of-type:checked ~ label:last-of-type::before {
     transform: translateX(-0.01rem);
 }
-
-/* Eng of the accessible toggle ====================================== */ 
 
 .calc__display {
     margin-bottom: 1.5rem;
